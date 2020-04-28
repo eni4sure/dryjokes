@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+.github-fork-ribbon:before {
+    background-color: #000 !important;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #e41b23;
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	margin: 0;
+}
+
+.container {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+	padding: 50px 20px;
+	text-align: center;
+	max-width: 100%;
+	width: 800px;
+}
+
+h3 {
+	opacity: 0.5;
+	letter-spacing: 2px;
+	margin: 0;
+}
+
+#joke {
+	font-size: 30px;
+	letter-spacing: 1px;
+	line-height: 40px;
+	margin: 50px auto;
+	max-width: 600px;
+}
+
+#get_new_joke_btn {
+	background-color: #e41b23;
+	border: 0;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.1);
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 14px 40px;
+}
+
+#get_new_joke_btn:active {
+	transform: scale(0.98);
+}
+
+#get_new_joke_btn:focus {
+	outline: 0;
+}
+
+.social-menu ul {
+    position: inherit;
+    padding: 0;
+    margin-top: 25px;
+    display: inline-block;
+}
+.social-menu ul li {
+	margin: 5px;
+    list-style: none;
+    display: inline-block;
+}
+.social-menu ul li .fa {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+.social-menu ul li .fa:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+.social-menu ul li:nth-child(4) a:hover {
+    background-color: #0077B5;
+}
