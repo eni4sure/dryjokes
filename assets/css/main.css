@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@700&display=swap');
 
 .github-fork-ribbon:before {
     background-color: #000 !important;
@@ -10,7 +10,7 @@
 
 body {
 	background-color: #e41b23;
-	font-family: 'Muli', sans-serif;
+	font-family: 'Anonymous Pro', monospace;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
