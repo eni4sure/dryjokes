@@ -29,7 +29,7 @@ async function get_joke() {
 
 	$.getJSON( 'https://api.allorigins.win/get?url=' + random_joke_api , function(joke_json) {
 		//var joke_json_parsed = JSON.parse( joke_json );
-		$("#joke").html( joke_json.contents[0].joke );
+		$("#joke").html( joke_json.contents );
 		// $("#joke").html( joke_json.joke. );
 	});
 }
