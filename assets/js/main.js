@@ -21,11 +21,11 @@ function dryyyyy() {
 
 async function get_joke() {
 
-	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
+	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 	
-	if ( [ 'https://api.yomomma.info/', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ].indexOf( random_joke_api ) > -1 ) {
+	if ( [ 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ].indexOf( random_joke_api ) > -1 ) {
 		
 		var jokeRes = await fetch( random_joke_api );
 	} else {
