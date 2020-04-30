@@ -21,15 +21,13 @@ function dryyyyy() {
 
 async function get_joke() {
 
-	//const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single' ];
+	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single' ];
 
-	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
+	//const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
-	$.getJSON( 'https://test.cors.workers.dev/?' + random_joke_api , function(joke_json) {
-		//var joke_json_parsed = JSON.parse( joke_json );
-		$("#joke").html( joke_json.joke );
-		// $("#joke").html( joke_json.joke. );
+	$.getJSON( random_joke_api , function(joke_json) {
+		$("#joke").html( joke_json.joke. );
 	});
 }
