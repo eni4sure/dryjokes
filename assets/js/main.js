@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
 	dryyyyy();
+	
+	$.getJSON("https://api.countapi.xyz/hit/eni4sure.github.io/dryjokes", function(view) {
+		$("#page_view_no").html( view.value );
+	});
 
 });
 
