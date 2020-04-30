@@ -25,8 +25,22 @@ function get_joke() {
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
-	$.getJSON( random_joke_api , function(joke_json) {
-		$("#joke").html( joke_json.joke );
+	//$.getJSON( random_joke_api , function(joke_json) {
+	//	$("#joke").html( joke_json.joke );
+	//});
+	
+	$.ajax({
+	    url: random_joke_api,
+	    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+	    type: "GET",
+	    dataType: "json",
+	    success: function (joke_json) {
+
+			$("#joke").html( joke_json.joke );
+	    },
+	    error: function () {
+			console.log("error");
+	    }
 	});
 
 }
