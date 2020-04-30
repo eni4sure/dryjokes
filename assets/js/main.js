@@ -24,6 +24,8 @@ async function get_joke() {
 	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
+	console.log(random_joke_api);
+	
 
 	const jokeRes = await fetch( random_joke_api, { headers: { 'Accept': 'application/json' } });
 	
