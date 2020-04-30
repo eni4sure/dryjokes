@@ -28,8 +28,8 @@ async function get_joke() {
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
 	$.getJSON( 'https://api.allorigins.win/get?url=' + random_joke_api , function(joke_json) {
-		var joke_json_parsed = JSON.parse( joke_json );
-		$("#joke").html( joke_json_parsed.contents[0].joke );
+		//var joke_json_parsed = JSON.parse( joke_json );
+		$("#joke").html( joke_json.contents[0].joke );
 		// $("#joke").html( joke_json.joke. );
 	});
 }
