@@ -27,9 +27,9 @@ async function get_joke() {
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
-	$.getJSON( 'https://api.allorigins.win/get?callback=myFunc&url=' + random_joke_api , function(joke_json) {
+	$.getJSON( 'https://test.cors.workers.dev/?' + random_joke_api , function(joke_json) {
 		//var joke_json_parsed = JSON.parse( joke_json );
-		$("#joke").html( joke_json.contents );
+		$("#joke").html( joke_json.joke );
 		// $("#joke").html( joke_json.joke. );
 	});
 }
