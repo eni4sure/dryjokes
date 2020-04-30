@@ -32,7 +32,7 @@ function get_joke() {
 	$.ajax({
 	    url: random_joke_api,
 	    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
-	    type: "GET",
+	    type: "POST",
 	    dataType: "json",
 	    success: function (joke_json) {
 
