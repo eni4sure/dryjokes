@@ -29,6 +29,13 @@ body {
 	width: 800px;
 }
 
+@media (min-width:480px)  {
+	.container {
+		height: 80vh;
+    		overflow-x: scroll;
+	}	
+}
+
 h3 {
 	opacity: 0.5;
 	letter-spacing: 2px;
