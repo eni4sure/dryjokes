@@ -21,26 +21,28 @@ function dryyyyy() {
 
 function get_joke() {
 
-	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
+	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single' ];
+
+	// const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
-	//$.getJSON( random_joke_api , function(joke_json) {
-	//	$("#joke").html( joke_json.joke );
-	//});
-	
-	$.ajax({
-	    url: random_joke_api,
-	    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
-	    type: "POST",
-	    dataType: "json",
-	    success: function (joke_json) {
-
-			$("#joke").html( joke_json.joke );
-	    },
-	    error: function () {
-			console.log("error");
-	    }
+	$.getJSON( random_joke_api , function(joke_json) {
+		$("#joke").html( joke_json.joke );
 	});
+	
+// 	$.ajax({
+// 	    url: random_joke_api,
+// 	    headers: { 'Content-Type': 'application/x-www-form-urlencoded', 'Accept': 'application/json' },
+// 	    type: "POST",
+// 	    dataType: "json",
+// 	    success: function (joke_json) {
+
+// 			$("#joke").html( joke_json.joke );
+// 	    },
+// 	    error: function () {
+// 			console.log("error");
+// 	    }
+// 	});
 
 }
