@@ -19,17 +19,21 @@ function dryyyyy() {
 	$("#joke_number").html( new_joke_number );
 }
 
-function get_joke() {
+async function get_joke() {
 
-	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single' ];
+	//const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single' ];
 
-	// const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
+// 	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
 
-	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
+// 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
-	$.getJSON( random_joke_api , function(joke_json) {
-		$("#joke").html( joke_json.joke );
-	});
+// 	$.getJSON( random_joke_api , function(joke_json) {
+// 		$("#joke").html( joke_json.joke );
+// 	});
+	
+	let url = 'https://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama';
+	let data = await(await fetch(url)).json();
+	console.log(data);
 	
 // 	$.ajax({
 // 	    url: random_joke_api,
