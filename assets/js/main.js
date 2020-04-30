@@ -21,7 +21,7 @@ function dryyyyy() {
 
 async function get_joke() {
 
-	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous?blacklistFlags=racist,sexist&type=single' ];
+	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=racist&type=single' ];
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
