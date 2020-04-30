@@ -21,16 +21,14 @@ function dryyyyy() {
 
 async function get_joke() {
 
-	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=racist&type=single' ];
+	const jokesApi = [ 'https://icanhazdadjoke.com/', 'https://sv443.net/jokeapi/v2/joke/Miscellaneous,Dark?blacklistFlags=nsfw,religious,racist,sexist&type=single', 'https://api.yomomma.info/', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=yomama', 'http://jokes.guyliangilsing.me/retrieveJokes.php?type=dadjoke' ];
 
 	var random_joke_api = jokesApi[ Math.floor( Math.random() * jokesApi.length ) ];
 
 	const jokeRes = await fetch( random_joke_api, { headers: { 'Accept': 'application/json' } });
+	
+	const jokedata = await jokeRes.json();
+	// console.log(joke);
 
-	var chosenValue = Math.random() < 0.5
-
-	const joke = await jokeRes.json();
-	console.log(joke);
-
-	$("#joke").html( joke.joke );
+	$("#joke").html( jokedata.joke );
 }
